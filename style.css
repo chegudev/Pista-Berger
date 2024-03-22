@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+img {
+    display: block;
+    width: 100%;
+}
+body {
+    font-size: 1.4rem;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300, 400, 600;
+    line-height: 2.4rem;
+    color: #232323;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,.5), transparent);
+    display: grid;
+    grid-template-columns: 7.5rem max-content;
+    padding: 1rem 2.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.brand {
+    display: block;
+}
+
+.brand img {
+    display: block;
+    width: 100%;
+}
+/* === Banner === */
+
+#banner {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.banner__bg-container {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    overflow-y: hidden;
+}
+
+.banner__bg-image {
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner__content {
+    grid-column: 1 / 4;
+    grid-row:  2 / 3;
+    z-index: 2;
+    justify-self: center;
+    text-align: center;
+}
+
+.banner__content--h1 {
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 4rem;
+}
+
+.banner__content--h2 {
+    color: white;
+    font-size: 10rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 10.8rem;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(to bottom right, #d94545, #d96f55);
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 4.5rem;
+    margin: 1.5rem 3rem;
+    transition: all 0.25s linear;
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom right, #f86d6d, #f88e6d);
+    box-shadow: 0 12px 24px rgba(0,0,0,.5);
+}
+
+.btn:focus {
+    background: #ad3636;
+    box-shadow: 0 6px 12px rgba(0,0,0,.5);
+}
+
+.btn:active {
+    background: #d94545;
+}
+
+.btn-lg{
+    font-size: 2.6rem;
+}
+
+/* about */
+
+#about {
+    background: url('./images/vecteezy_proud-male-chef-cook-burger-in-bar-or-cafe-smiling-man-in_13466396\ [Converted].jpg') top no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 25rem repeat(2, minmax(0, 1fr)) 25rem;
+    grid-template-rows: 20rem 1fr 20rem;
+    grid-template-areas: '. title title .'
+                        '. content-left content-right .'
+                        'figures figures figures figures';
+    gap: 2rem;
+                    
+}
+
+.about__content-left {
+    grid-area: content-left;
+    font-size: 2.2rem;
+    line-height: 3.9rem;
+    color: #232323
+}
+
+.about__content-right {
+    grid-area: content-right;
+    color: #528268dd;
+    font-size: 1.3rem;
+}
+
+.about__figures {
+    grid-area: figures;
+    display: grid;
+    grid-template-columns: repeat(3, 20rem);
+    justify-content: left;
+    margin-left: 19rem;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.about__figure-number {
+    font-size: 5.8rem;
+    line-height: 5.6rem;
+    font-weight: 300;
+}
+
+.about__figure-text {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#about .section-heading {
+    grid-area: title;
+    text-align: center;
+}
+
+.section-heading {
+    color: #232323;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 6rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.section-heading__back,
+.section-heading__front {
+    display: block;
+    font-size: 5rem;
+}
+
+.section-heading__back {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    opacity: .2;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 4rem;
+}
+
+/* Menu */
+
+#menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 20rem 1fr 10rem;
+    justify-items: center;
+}
+
+#menu .section-heading {
+    grid-column: span 2;
+}
+
+.menu__item {
+    display: grid;
+    grid-template-columns: 10rem 1fr min-content;
+    gap: 0 1.5rem;
+    align-items: center;
+}
+
+.menu__item:not(:last-of-type){
+    margin-bottom: 2rem;
+}
+
+.menu__item-line {
+    width: 100%;
+    border-bottom: 2px dotted #cfcece;
+}
